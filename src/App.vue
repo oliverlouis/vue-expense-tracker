@@ -1,17 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app-container">
+    <TransactionList />
+    <BudgetList />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import TransactionList from "./components/TransactionList";
+import BudgetList from "./components/BudgetList";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    TransactionList,
+    BudgetList,
+  },
+};
 </script>
 
 <style>
@@ -22,5 +25,19 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.app-container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.display {
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
 }
 </style>
