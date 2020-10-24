@@ -1,43 +1,43 @@
 import { createStore } from 'vuex';
 import getters from './getters';
+import actions from './actions';
+import mutations from './mutations';
 
 const store = createStore({
 	state() {
 		return {
 			transactions: [
 				{
-					id: 1,
+					id: new Date().toISOString(),
 					type: 'inc',
 					description: 'Paycheck',
-					amount: 2000,
-					date: new Date().getDay()
+					amount: 2000
 				},
 				{
-					id: 2,
+					id: new Date().toISOString(),
 					type: 'exp',
 					description: 'Rent',
-					amount: 500,
-					date: new Date().getDay()
+					amount: 500
 				},
 				{
-					id: 3,
+					id: new Date().toISOString(),
 					type: 'inc',
 					description: 'Project',
-					amount: 700,
-					date: new Date().getDay()
+					amount: 700
 				},
 				{
-					id: 4,
+					id: new Date().toISOString(),
 					type: 'exp',
 					description: 'Car Loan',
-					amount: 400,
-					date: new Date().getDay()
+					amount: 400
 				}
 			]
 		};
 	},
 
-	getters
+	getters,
+	actions,
+	mutations
 });
 
 export default store;
