@@ -39,18 +39,11 @@ export default {
     setModalOpen(value) {
       this.modalOpen = value.modalState;
       this.type = value.transType;
-      console.log(this.modalOpen);
-      console.log(this.type);
     },
 
     setModalClose(value) {
       this.modalOpen = value;
-      console.log(this.modalOpen);
     },
-  },
-
-  created() {
-    console.log(this.modalOpen);
   },
 };
 </script>

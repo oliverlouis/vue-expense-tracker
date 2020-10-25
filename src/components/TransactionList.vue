@@ -3,9 +3,9 @@
     <TransactionItem
       v-for="transaction in transactions"
       :key="transaction.id"
+      :id="transaction.id"
       :description="transaction.description"
       :amount="transaction.amount"
-      :date="transaction.date"
     />
   </div>
 </template>

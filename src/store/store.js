@@ -8,25 +8,25 @@ const store = createStore({
 		return {
 			transactions: [
 				{
-					id: new Date().toISOString(),
+					id: 1,
 					type: 'inc',
 					description: 'Paycheck',
 					amount: 2000
 				},
 				{
-					id: new Date().toISOString(),
+					id: 2,
 					type: 'exp',
 					description: 'Rent',
 					amount: 500
 				},
 				{
-					id: new Date().toISOString(),
+					id: 3,
 					type: 'inc',
 					description: 'Project',
 					amount: 700
 				},
 				{
-					id: new Date().toISOString(),
+					id: 4,
 					type: 'exp',
 					description: 'Car Loan',
 					amount: 400

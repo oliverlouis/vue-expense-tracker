@@ -1,11 +1,17 @@
 <template>
   <div class="display">
-    <h3>Expense Display</h3>
+    <h3>{{ getTotalExpense }}</h3>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    getTotalExpense() {
+      return this.$store.getters.totalExpense;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

@@ -16,17 +16,21 @@ export default {
   data() {
     return {
       description: "",
-      amount: null,
+      amount: 0,
     };
   },
 
   methods: {
     submitTransaction() {
+      const generatedId = function () {
+        return "_" + Math.random().toString(36).substr(2, 9);
+      };
+
       const transaction = {
-        id: new Date().toISOString(),
+        id: generatedId(),
         type: this.type,
         description: this.description,
-        amount: this.amount,
+        amount: +this.amount,
       };
 
       this.$store.dispatch("ADD_TRANSACTION", transaction);

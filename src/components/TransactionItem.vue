@@ -1,8 +1,12 @@
 <template>
   <div class="transaction">
-    <h3>{{ description }}</h3>
-    <h4>{{ amount }}</h4>
-    <p>{{ date }}</p>
+    <div>
+      <h3>{{ description }}</h3>
+      <h4>{{ amount }}</h4>
+    </div>
+    <div>
+      <button @click="deleteTransaction">Delete</button>
+    </div>
   </div>
 </template>
 
@@ -10,7 +14,13 @@
 export default {
   name: "TransactionItem",
 
-  props: ["description", "amount", "date"],
+  props: ["description", "amount", "id"],
+
+  methods: {
+    deleteTransaction() {
+      this.$store.dispatch("DELETE_TRANSACTION", this.id);
+    },
+  },
 };
 </script>
 
@@ -18,8 +28,10 @@ export default {
 .transaction {
   border: 1px solid black;
   width: 100%;
-  padding: 20px;
+  padding: 10px 20px;
   margin-bottom: 20px;
   border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 </style>
