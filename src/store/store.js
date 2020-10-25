@@ -7,30 +7,30 @@ const store = createStore({
 	state() {
 		return {
 			transactions: [
-				{
-					id: 1,
-					type: 'inc',
-					description: 'Paycheck',
-					amount: 2000
-				},
-				{
-					id: 2,
-					type: 'exp',
-					description: 'Rent',
-					amount: 500
-				},
-				{
-					id: 3,
-					type: 'inc',
-					description: 'Project',
-					amount: 700
-				},
-				{
-					id: 4,
-					type: 'exp',
-					description: 'Car Loan',
-					amount: 400
-				}
+				// {
+				// 	id: 1,
+				// 	type: 'inc',
+				// 	description: 'Paycheck',
+				// 	amount: 2000
+				// },
+				// {
+				// 	id: 2,
+				// 	type: 'exp',
+				// 	description: 'Rent',
+				// 	amount: 500
+				// },
+				// {
+				// 	id: 3,
+				// 	type: 'inc',
+				// 	description: 'Project',
+				// 	amount: 700
+				// },
+				// {
+				// 	id: 4,
+				// 	type: 'exp',
+				// 	description: 'Car Loan',
+				// 	amount: 400
+				// }
 			]
 		};
 	},

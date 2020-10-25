@@ -1,7 +1,11 @@
 <template>
   <div class="transaction-select">
-    <button class="btn" @click.stop="openModalIncome">Income</button>
-    <button class="btn" @click.stop="openModalExpense">Expense</button>
+    <button class="btn btn-inc" @click.stop="openModalIncome">
+      Add Income
+    </button>
+    <button class="btn btn-exp" @click.stop="openModalExpense">
+      Add Expense
+    </button>
   </div>
 </template>
 
@@ -33,7 +37,32 @@ export default {
 }
 
 .btn {
+  width: 170px;
+  padding: 25px 20px;
+  border-radius: 10px;
   cursor: pointer;
-  margin: 20px;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  transition: all 0.2s;
+  margin: 0 30px;
+  font-family: "Poppins", sans-serif;
+
+  &:active {
+    outline: none;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &-inc {
+    background-color: #99c34b;
+  }
+
+  &-exp {
+    background-color: #e6494e;
+  }
 }
 </style>

@@ -50,7 +50,7 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -58,8 +58,11 @@ export default {
   margin-top: 60px;
 }
 .app-container {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 50px;
 
   &__transactions {
     width: 100%;
@@ -72,7 +75,7 @@ export default {
   width: 100%;
   border: 1px solid grey;
   border-radius: 15px;
-  padding: 20px;
+  padding: 5px 10px;
   margin-bottom: 30px;
 }
 </style>

@@ -6,6 +6,7 @@
       :id="transaction.id"
       :description="transaction.description"
       :amount="transaction.amount"
+      :type="transaction.type"
     />
   </div>
 </template>

@@ -1,6 +1,7 @@
 <template>
   <div class="display">
-    <h3>{{ getTotalIncome }}</h3>
+    <h4>Income</h4>
+    <h3>{{ setTransactionSymbol }}${{ getTotalIncome }}</h3>
   </div>
 </template>
 
@@ -10,6 +11,10 @@ export default {
     getTotalIncome() {
       return this.$store.getters.totalIncome;
     },
+
+    setTransactionSymbol() {
+      return this.getTotalIncome === 0 ? "" : "+";
+    },
   },
 };
 </script>
@@ -17,5 +22,11 @@ export default {
 <style lang="scss" scoped>
 .display {
   width: 100%;
+  border: none;
+  background-color: rgb(251, 251, 251);
+  color: #99c34b;
+  line-height: 0.5;
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(168, 168, 168, 0.36);
+  box-shadow: 0px 3px 6px 0px rgba(168, 168, 168, 0.36);
 }
 </style>

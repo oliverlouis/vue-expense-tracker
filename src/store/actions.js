@@ -5,6 +5,5 @@ export default {
 
 	DELETE_TRANSACTION(context, payload) {
 		context.commit('deleteTransaction', payload);
-		console.log(payload);
 	}
 };
