@@ -22,5 +22,6 @@ export default {
 <style lang="scss" scoped>
 .budget-list {
   width: 200px;
+  justify-self: flex-end;
 }
 </style>

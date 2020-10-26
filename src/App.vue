@@ -7,8 +7,8 @@
         :type="type"
         @close-modal="setModalClose"
       />
-      <TransactionList v-else />
-      <BudgetList />
+      <TransactionList v-else class="app-contianer__transactions-trans-list" />
+      <BudgetList lass="app-contianer__transactions-budget-list" />
     </div>
   </div>
 </template>
@@ -63,11 +63,21 @@ export default {
   background-color: #fff;
   border-radius: 20px;
   padding: 50px;
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(168, 168, 168, 0.36);
+  box-shadow: 0px 3px 6px 0px rgba(168, 168, 168, 0.36);
 
   &__transactions {
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    &-trans-list {
+      justify-self: center;
+    }
+
+    &-budget-list {
+      justify-self: flex-end;
+    }
   }
 }
 
